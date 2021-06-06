@@ -1,0 +1,30 @@
+{
+  "profiles": {
+    "Mod.DaprWithFamousActors": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": "true",
+      "applicationUrl": "http://localhost:5000;https://localhost:5001"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "publishAllPorts": true,
+      "useSSL": true
+    },
+    "Dapr-PWSH": {
+      "commandName": "Executable",
+      "executablePath": "pwsh",
+      "commandLineArgs": "-Command \"dapr run --app-id modDaprWithFamousActors --app-port 5000 --app-protocol grpc --log-level debug -- dotnet run --no-build\"",
+      "workingDirectory": ".",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "nativeDebugging": true,
+      "dotnetRunMessages": "true",
+      "applicationUrl": "http://localhost:5000;https://localhost:5001"
+    }
+  }
+}

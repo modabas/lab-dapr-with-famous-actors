@@ -1,0 +1,10 @@
+
+#Run Server locally
+cd C:\Projects\Labs\Mod.DaprWithFamousActors\Mod.DaprWithFamousActors
+dapr run --app-id modDaprWithFamousActors --app-port 5000 --app-protocol grpc --log-level debug dotnet run
+
+#Run Client locally
+cd C:\Projects\Labs\Mod.DaprWithFamousActors\Mod.DaprWithFamousActors.DaprClient
+dapr run --app-id modDaprWithFamousActorsDaprClient --app-protocol grpc --log-level debug dotnet run modDaprWithFamousActors SayHello GrpcLover
+
+
